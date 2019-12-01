@@ -9,6 +9,11 @@ using namespace std;
 int ALL_Schedule_Number = 3;
 int info_end_X = 101;
 int info_end_Y = 5;
+string event_name = "이거어언 이르으음";
+string event_star = "★★★☆☆";
+string event_info = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa가나다랍마감작맞ㄱㅁㅈㄱ";
+string event_info_def = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa이것은 확인용 글씨고 어떻게 될지는 나도 잘 모르겠는데 영어는 67인가 나 나나나 난나 나나난나! 하~ 난 나나나 난난 나나나 난 나! 하! 문장! ㅎ한번 오지aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+//이것은 확인용 글씨고 어떻게 될지는 나도 잘 모르겠는데 영어는 67인가 나 나나나 난나 나나난나! 하~ 난 나나나 난난 나나나 난 나! 하! 문장! ㅎ한번 오지게 
 
 using std::string;
 
@@ -62,10 +67,54 @@ void Check_More_Detail() {
 	gotoxy(137, 2);
 	printf("홈으로 돌아가기");
 
-	draw_text(" 이름", 3, 2);
-	draw_text(" ★★★☆☆", 40, 2);
+	draw_text(event_name, 3, 2);
+	draw_text(event_star, 41, 2);
 	draw_text(" 간단 내용", 23, 5);
+	int info_num = (event_info.length() / 71) + 1;
+	int start_num = 0, end_num = 71, Y = 6;
+	if (event_info.length() > 71) {
+		for (int i = 1; i <= info_num; i++) {
+			string sub1 = event_info.substr(start_num, end_num);
+			draw_text(sub1, 3, Y);
+			start_num = end_num;
+			if (info_num == i - 1) {
+				end_num = event_info.length();
+			}
+			else {
+				end_num = end_num * i - 1;
+			}
+			Y++;
+		}
+	}
+	else {
+		draw_text(event_info, 3, 6);
+	}
+	
+	
 	draw_text(" 상세 내용", 23, 14);
+	int def_num= (event_info_def.length()/151)+1;
+	start_num = 0 , end_num=151,Y=15;
+	
+	if (event_info_def.length() > 151) {
+		for (int i = 1; i <= def_num; i++) {
+			if (i >= 2) {
+				start_num -= 1;
+			}
+			string sub1 = event_info_def.substr(start_num, end_num);
+			draw_text(sub1, 3, Y);
+			start_num = end_num;
+			if (def_num == i - 1) {
+				end_num = event_info_def.length();
+			}
+			else {
+				end_num = end_num * i -1;
+			}
+			Y++;
+		}
+	}
+	else {
+		draw_text(event_info_def, 3, 15);
+	}
 
 	gotoxy(149, 44);
 	printf("");
@@ -124,9 +173,9 @@ void the_whole_project() {
 
 int main() {
 	//Activity_Verification();
-	//Check_More_Detail();
+	Check_More_Detail();
 	//Information_input();
-	the_whole_project();
+	//the_whole_project();
 
 	return 0;
 }
