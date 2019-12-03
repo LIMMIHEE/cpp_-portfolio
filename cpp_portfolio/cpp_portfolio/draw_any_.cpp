@@ -12,7 +12,7 @@ int info_end_Y = 5;
 string event_name = "이거어언 이르으음";
 string event_star = "★★★☆☆";
 string event_info = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa가나다랍마감작맞ㄱㅁㅈㄱ";
-string event_info_def = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa이것은 확인용 글씨고 어떻게 될지는 나도 잘 모르겠는데 영어는 67인가 나 나나나 난나 나나난나! 하~ 난 나나나 난난 나나나 난 나! 하! 문장! ㅎ한번 오지aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+string event_info_def = "이것은 확인용 글씨고 어떻게 될지는 나도 잘 모르겠는데 영어는 67인가 나 나나나 난나 나나난나! 하~ 난 나나나 난난 나나나 난 나! 하! 문장! ㅎ한번 오지aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaㅁㅁㅁㅁㅁㅁ";
 //이것은 확인용 글씨고 어떻게 될지는 나도 잘 모르겠는데 영어는 67인가 나 나나나 난나 나나난나! 하~ 난 나나나 난난 나나나 난 나! 하! 문장! ㅎ한번 오지게 
 
 using std::string;
@@ -77,7 +77,7 @@ void Check_More_Detail() {
 			string sub1 = event_info.substr(start_num, end_num);
 			draw_text(sub1, 3, Y);
 			start_num = end_num;
-			if (info_num == i - 1) {
+			if (info_num - 1 == i ) {
 				end_num = event_info.length();
 			}
 			else {
