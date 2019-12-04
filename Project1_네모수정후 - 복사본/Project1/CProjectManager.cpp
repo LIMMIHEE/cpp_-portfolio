@@ -37,7 +37,7 @@ bool CProjectManager::InsertProject(int num, string event_name, string event_chk
 
 CProjectManager::CProjectManager()
 {
-	this->filepath = "D:\\Leeyeseul\\git_Example\\cpp_-portfolio-master\\cpp_-portfolio-master\\Project1_네모수정후\\Project1\\Project.txt";
+	this->filepath = "C:\\Users\\arica\\Downloads\\cpp_-portfolio-master\\cpp_-portfolio-master\\Project1_네모수정후 - 복사본\\Project1\\Project.txt";
 }
 
 CProjectManager::CProjectManager(string filepath) {

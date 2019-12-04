@@ -76,7 +76,7 @@ int main() {
 			int menu = menuDraw(); // 메뉴
 
 			switch (menu) {
-			case 0: //일정 추가
+			case 0: //일정 확인
 				system("cls");
 				Check_More_Detail();
 				break;
@@ -101,74 +101,6 @@ int main() {
 
 ///////////////////////////////////////////////함수 재정의///////////////////////////////////////////////////
 
-/*
-void draw_rectangle(int c, int r) {
-	unsigned char a = 0xa6;
-	unsigned char b[7];
-	for (int i = 1; i < 7; i++) {
-		b[i] = 0xa0 + i;
-	}
-
-	printf("%c%c ", a, b[3]);
-	for (int i = 0; i < c; i++) {
-		printf("%c%c ", a, b[1]);
-	}
-	printf("%c%c\n", a, b[4]);
-
-	for (int i = 0; i < r; i++) {
-		printf("%c%c ", a, b[2]);
-		for (int j = 0; j < c; j++) {
-			printf("  ");
-		}
-		printf("%c%c\n", a, b[2]);
-	}
-	printf("%c%c ", a, b[6]);
-	for (int i = 0; i < c; i++) {
-		printf("%c%c ", a, b[1]);
-	}
-	printf("%c%c\n", a, b[5]);
-}
-/////////////////////////////////////////////////////////////
-void draw_rectangle_g(int c, int r, int n, int m) {
-	int setN = n;
-	unsigned char a = 0xa6;
-	unsigned char b[7];
-	for (int i = 1; i < 7; i++) {
-		b[i] = 0xa0 + i;
-	}
-	gotoxy(n - 1, m);
-	printf("%c%c ", a, b[3]);
-	for (int i = 0; i < c; i++) {
-		gotoxy(n++, m);
-		printf("%c%c ", a, b[1]);
-	}
-
-	gotoxy(n, m++);
-	printf("%c%c", a, b[4]);
-	n = setN - 1;
-	for (int i = 0; i < r; i++) {
-		gotoxy(n++, m);
-		printf("%c%c ", a, b[2]);
-		for (int j = 0; j < c; j++) {
-			gotoxy(n++, m);
-			printf("  ");
-		}
-		gotoxy(n++, m++);
-		printf("%c%c", a, b[2]);
-		n = setN - 1;
-	}
-
-	gotoxy(n, m);
-	printf("%c%c ", a, b[6]);
-	n = setN;
-	for (int i = 0; i < c; i++) {
-		gotoxy(n++, m);
-		printf("%c%c ", a, b[1]);
-	}
-	gotoxy(n++, m++);
-	printf("%c%c", a, b[5]);
-}
-*/
 //////////////////////////////////////////////////////
 void draw_text(string p, int n, int m) {
 	gotoxy(n, m);
@@ -378,8 +310,13 @@ void Check_More_Detail() {
 	}
 
 	gotoxy(149, 44);
-	printf("");
-
+	cout<<("");
+	while(1){
+	char ch;
+	cin.get(ch);
+	if (ch == '\n')
+		menuDraw();
+	}
 }
 
 //넣을때 화면
@@ -406,15 +343,14 @@ void Information_input() {
 	gotoxy(3, 7);
 	cout << "중요도   : ";
 	cout << "\n\n";
-	//draw_rectangle(26, 5);
 	gotoxy(18, 9);
 	cout << "간단한 후기/내용";
 	cout << "\n\n\n\n\n\n\n";
-	//draw_rectangle(62, 25);
 	gotoxy(22, 16);
 	cout << "상세 내용";
 	gotoxy(80, 43);
 	cout << "";
+
 
 	//입력받기
 	gotoxy(12, 3);
@@ -435,6 +371,10 @@ void Information_input() {
 	int num = UM->getNum();
 
 	CP->InsertProject(num, name, EventChk, Importance, review, details);
+
+
+		menuDraw();
+
 
 }
 

@@ -114,13 +114,6 @@ bool CMysql::Login()
 	string num1;
 	string num2;
 
-	//cout << "ID : ";
-	//fgets(id, 10, stdin);
-	//CHOP(id);  
-
-	//cout << "PassWord : ";
-	//fgets(password, 20, stdin);
-	//CHOP(password);
 
 	mysql_init(&conn);
 
