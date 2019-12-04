@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\mysql\mysql server 5.7\include</FILEPATH>
+      <FILENAME>my_byteorder.h</FILENAME>
+      <LINE>59</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>uint5korr</FUNCTION>
+    <DECORATED>?uint5korr@@YA_KPEBE@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\mysql\mysql server 5.7\include</FILEPATH>
+      <FILENAME>my_byteorder.h</FILENAME>
+      <LINE>58</LINE>
+      <COLUMN>42</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>uint5korr</FUNCTION>
+    <DECORATED>?uint5korr@@YA_KPEBE@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\mysql\mysql server 5.7\include</FILEPATH>
+      <FILENAME>my_byteorder.h</FILENAME>
+      <LINE>57</LINE>
+      <COLUMN>35</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>uint5korr</FUNCTION>
+    <DECORATED>?uint5korr@@YA_KPEBE@Z</DECORATED>
+    <FUNCLINE>54</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\mysql\mysql server 5.7\include</FILEPATH>
+      <FILENAME>my_byteorder.h</FILENAME>
+      <LINE>70</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>uint6korr</FUNCTION>
+    <DECORATED>?uint6korr@@YA_KPEBE@Z</DECORATED>
+    <FUNCLINE>65</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\mysql\mysql server 5.7\include</FILEPATH>
+      <FILENAME>my_byteorder.h</FILENAME>
+      <LINE>69</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>uint6korr</FUNCTION>
+    <DECORATED>?uint6korr@@YA_KPEBE@Z</DECORATED>
+    <FUNCLINE>65</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\program files\mysql\mysql server 5.7\include</FILEPATH>
+      <FILENAME>my_byteorder.h</FILENAME>
+      <LINE>68</LINE>
+      <COLUMN>44</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>uint6korr</FUNCTION>
+    <DECORATED>?uint6korr@@YA_KPEBE@Z</DECORATED>
+    <FUNCLINE>65</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\leeyeseul\mirim\subject\cpp\cpp 게임기획\project1\project1</FILEPATH>
+      <FILENAME>cmysql.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CMysql::pres' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CMysql::{ctor}</FUNCTION>
+    <DECORATED>??0CMysql@@QEAA@XZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\leeyeseul\mirim\subject\cpp\cpp 게임기획\project1\project1</FILEPATH>
+      <FILENAME>cmysql.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CMysql::row' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CMysql::{ctor}</FUNCTION>
+    <DECORATED>??0CMysql@@QEAA@XZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\leeyeseul\mirim\subject\cpp\cpp 게임기획\project1\project1</FILEPATH>
+      <FILENAME>cmysql.cpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CMysql::pfield' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CMysql::{ctor}</FUNCTION>
+    <DECORATED>??0CMysql@@QEAA@XZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

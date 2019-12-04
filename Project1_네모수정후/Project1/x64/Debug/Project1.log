@@ -1,0 +1,5 @@
+﻿  CMysql.cpp
+c:\users\arica\downloads\cpp_-portfolio-master (1)\cpp_-portfolio-master\project1 - 복사본\project1\cmysql.cpp(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'my_global.h': No such file or directory
+  Main.cpp
+c:\users\arica\downloads\cpp_-portfolio-master (1)\cpp_-portfolio-master\project1 - 복사본\project1\cmysql.h(1): fatal error C1083: 포함 파일을 열 수 없습니다. 'mysql.h': No such file or directory
+  코드를 생성하고 있습니다...

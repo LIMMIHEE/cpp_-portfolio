@@ -1,0 +1,5 @@
+﻿  소스.cpp
+d:\leeyeseul\mirim\subject\cpp\cpp 게임기획\project1\project1\소스.cpp(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'my_global.h': No such file or directory
+  소스1.cpp
+d:\leeyeseul\mirim\subject\cpp\cpp 게임기획\project1\project1\소스1.cpp(3): fatal error C1083: 포함 파일을 열 수 없습니다. 'my_global.h': No such file or directory
+  코드를 생성하고 있습니다...
