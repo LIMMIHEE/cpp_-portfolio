@@ -334,6 +334,15 @@ int KeyControl() { //키 입력받아서 화살표 키에 따라 #define 값 리턴
 
 //공모전 프로젝트 세미나 등 일정 확인 칸 (현재 칸)
 void Activity_Verification() {
+	// 이벤트 종류( 세미나, 공모전 등등 )
+	string event_kind = "   ";
+	//행사 이름
+	string e_name = "   ";
+	// 중요도 ( 별 그거 )
+	string Importance = "aaa";
+
+	// 현재 선택한 거 X 좌표 찍어주는 거
+	int selet_X_ = 61;
 
 	draw_rectangle(15, 1);
 	printf("\n");
@@ -341,67 +350,84 @@ void Activity_Verification() {
 	printf("이전으로 돌아가기");
 	gotoxy(111, 3);
 	printf("홈으로 돌아가기");
-	draw_rectangle_g(125, 10, 2, 5);
-	draw_text(" 세미나", 63, 5);
-	draw_text("  ________________", 6, 8);
-	draw_text("\t  ★★★☆☆", 22, 8);
-	draw_text("\t 50%", 40, 8);
-	draw_text("\t ◁", 41, 8);
-	draw_text("  ________________", 6, 10);
-	draw_text("\t  ★★☆☆☆", 22, 10);
-	draw_text("\t 50%", 40, 10);
-	draw_text("  ________________", 6, 12);
-	draw_text("\t  ★☆☆☆☆", 22, 12);
-	draw_text("\t 50%", 40, 12);
-
-	draw_rectangle_g(125, 10, 2, 17);
-	draw_text(" 공모전", 63, 17);
-	draw_text("  ________________", 6, 20);
-	draw_text("\t  ★★★☆☆", 22, 20);
-	draw_text("\t 50%", 40, 20);
-	draw_text("  ________________", 6, 22);
-	draw_text("\t  ★★☆☆☆", 22, 22);
-	draw_text("\t 50%", 40, 22);
-	draw_text("  ________________", 6, 24);
-	draw_text("\t  ★☆☆☆☆", 22, 24);
-	draw_text("\t 50%", 40, 24);
-
-	draw_rectangle_g(125, 10, 2, 29);
-
-	draw_text(" 프로젝트", 63, 29);
-	draw_text("  ________________", 6, 32);
-	draw_text("\t  ★★★☆☆", 22, 32);
-	draw_text("\t 50%", 40, 32);
-	draw_text("  ________________", 6, 34);
-	draw_text("\t  ★★☆☆☆", 22, 34);
-	draw_text("\t 50%", 40, 34);
-	draw_text("  ________________", 6, 36);
-	draw_text("\t  ★☆☆☆☆", 22, 36);
-	draw_text("\t 50%", 40, 36);
+	int  AllEventY = 8;
+	draw_rectangle_g(125, 40, 2, 5);
+	draw_text(" 현재 일정", 63, 5);
+	for (int j = 0; j < 4; j++) {
+		draw_text(e_name, 6, AllEventY);
+		draw_text(e_name, 22, AllEventY);
+		draw_text(Importance, 40, AllEventY);
+		draw_text("◁", selet_X_, AllEventY);
+		AllEventY += 2;
+	}
 
 
-	gotoxy(1, 40);
+	gotoxy(1, 65);
 	printf(" ");
-
-
 }
 
 //자세확인
 void Check_More_Detail() {
+	//event_name = 프로젝트 이름
+	//event_star == 중요도
+	//event_info == 간단내용
+	//event_info_def==상세내용
+
 	draw_rectangle(15, 2);
 
-	//gotoxy(0,10);
-	draw_rectangle(35, 7);
-	draw_rectangle(75, 28);
+	draw_rectangle(36, 7);
+	draw_rectangle(76, 28);
 
-	//draw_rectangle(10, 1);
-	draw_rectangle_g(10, 2, 40, 1);
-	draw_rectangle_g(10, 2, 50, 1);
+	draw_rectangle_g(12, 2, 40, 1);
 
 	gotoxy(114, 2);
-	printf("이전으로 돌아가기");
+	cout << ("이전으로 돌아가기");
 	gotoxy(137, 2);
-	printf("홈으로 돌아가기");
+	cout << ("홈으로 돌아가기");
+
+	draw_text(event_name, 3, 2);
+	draw_text(event_star, 41, 2);
+	draw_text(" 간단 내용", 23, 5);
+	int def_num = (event_info.length() / 71);
+	int start_num = 0, end_num = 71, Y = 6;
+
+	if (event_info.length() > 71) {
+		for (int i = 1; i <= def_num; i++) {
+			string sub1 = event_info.substr(start_num, end_num);
+			draw_text(sub1, 3, Y);
+			start_num = end_num * (i);
+			if (start_num + 71 > event_info.length()) {
+				Y++;
+				string sub1 = event_info.substr(start_num, end_num);
+				draw_text(sub1, 3, Y);
+			}
+			Y++;
+		}
+	}
+	else {
+		draw_text(event_info, 3, 6);
+	}
+
+	draw_text(" 상세 내용", 23, 14);
+	def_num = (event_info_def.length() / 151);
+	start_num = 0; end_num = 151; Y = 15;
+
+	if (event_info_def.length() > 151) {
+		for (int i = 1; i <= def_num; i++) {
+			string sub1 = event_info_def.substr(start_num, end_num);
+			draw_text(sub1, 3, Y);
+			start_num = end_num * (i);
+			if (start_num + 151 > event_info_def.length()) {
+				Y++;
+				string sub1 = event_info_def.substr(start_num, end_num);
+				draw_text(sub1, 3, Y);
+			}
+			Y++;
+		}
+	}
+	else {
+		draw_text(event_info_def, 3, 15);
+	}
 
 	gotoxy(149, 44);
 	printf("");
@@ -475,24 +501,25 @@ void Information_input() {
 //전체 확인
 void the_whole_project() {
 	gotoxy(17, 3);
-	printf("전체 프로젝트");
+	printf("전체 행사");
 	printf("\n\n\n\n\n");
 	gotoxy(41, 5);
 	printf("이전으로 돌아가기");
 	gotoxy(64, 5);
 	printf("홈으로 돌아가기");
 
-	gotoxy(4, 9);
-	printf("■");
-	gotoxy(15, 9);
-	printf("프로젝트1");
+	int ALL_ScheduleY = 9;	// Y 
+	//ALL_Schedule_Number == 전체 스케쥴 수
 
-	gotoxy(4, 12);
-	printf("■");
-	gotoxy(15, 12);
-	printf("프로젝트2");
+	for (int i = 0; i < ALL_Schedule_Number; i++) {
+		gotoxy(4, ALL_ScheduleY);
+		printf("■");
+		gotoxy(15, ALL_ScheduleY);
+		printf("프로젝트1");
 
-	gotoxy(40, 20);
+		ALL_ScheduleY += 3;
+	}
+	gotoxy(ALL_Schedule_Number + (5 * ALL_Schedule_Number), 20);
 	printf("");
 
 }
